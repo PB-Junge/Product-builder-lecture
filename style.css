@@ -24,7 +24,7 @@ body {
     font-family: sans-serif;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     min-height: 100vh;
     margin: 0;
@@ -37,6 +37,7 @@ body {
 .container {
     text-align: center;
     margin-bottom: 50px;
+    margin-top: 50px;
 }
 
 .numbers-container {
@@ -85,6 +86,7 @@ body {
     color: var(--text-color);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     font-size: 20px;
+    z-index: 1000;
 }
 
 /* Form Styles */
@@ -96,6 +98,7 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s;
+    margin-bottom: 50px;
 }
 
 .form-container h2 {
@@ -147,4 +150,15 @@ body {
 
 .submit-btn:hover {
     opacity: 0.9;
+}
+
+/* Disqus Styles */
+#disqus_thread {
+    width: 100%;
+    max-width: 800px;
+    margin-top: 50px;
+    padding: 20px;
+    background-color: var(--number-bg);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
