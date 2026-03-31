@@ -6,6 +6,8 @@
     --number-text: #333;
     --btn-bg: #4CAF50;
     --btn-text: white;
+    --input-bg: #fff;
+    --input-border: #ddd;
 }
 
 body.dark-mode {
@@ -14,14 +16,19 @@ body.dark-mode {
     --number-bg: #333;
     --number-text: #fff;
     --btn-bg: #45a049;
+    --input-bg: #2a2a2a;
+    --input-border: #444;
 }
 
 body {
     font-family: sans-serif;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    margin: 0;
+    padding: 20px;
     background-color: var(--bg-color);
     color: var(--text-color);
     transition: background-color 0.3s, color 0.3s;
@@ -29,6 +36,7 @@ body {
 
 .container {
     text-align: center;
+    margin-bottom: 50px;
 }
 
 .numbers-container {
@@ -36,6 +44,7 @@ body {
     gap: 10px;
     margin-bottom: 20px;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .number {
@@ -76,4 +85,66 @@ body {
     color: var(--text-color);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     font-size: 20px;
+}
+
+/* Form Styles */
+.form-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: var(--number-bg);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+.form-container h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--input-border);
+    border-radius: 5px;
+    background-color: var(--input-bg);
+    color: var(--text-color);
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--btn-bg);
+    color: var(--btn-text);
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    opacity: 0.9;
 }
